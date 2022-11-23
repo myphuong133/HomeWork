@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Bài tập] Ứng dụng chuyển đổi tiền tệ</title>
+</head>
+<body>
+    <h2>Ứng dụng chuyển đổi tiền tệ cơ bản</h2>
+    <input type="number" id="money" placeholder="Nhập số tiền" >
+
+    <select id="from1">
+        <option value="VND">VNĐ</option>
+        <option value="USD">USA</option>
+    </select>
+    
+    <select id="from2">
+        <option value="VND">VNĐ</option>
+        <option value="USD">USA</option>
+    </select>
+    <input type="button" onclick="calculator()" value="Tính"> 
+    <hr>
+    <p id="result"></p>
+    
+    <script>
+       function calculator(){
+            let result = '';
+            let money  = document.getElementById('money').value;
+            let type1  = document.getElementById('from1').value;
+            let type2  = document.getElementById('from2').value
+       
+            if (type1 == 'VND'){
+                money = money/23000
+            }    
+            if (type2 == 'VND'){
+                money = money*23000 
+            }
+        
+            document.getElementById('result').innerHTML = 'Kết quả là: ' + money
+        }
+
+    </script>
+    
+</body>
+</html>
