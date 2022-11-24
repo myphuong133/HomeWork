@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Bài tập] Tính lãi suất ngân hàng</title>
+</head>
+<body>
+    <h2>Tính lãi suất ngân hàng theo lãi đơn</h2>
+    <input type="number" id="origin" placeholder="Nhập số tiền gốc" >
+    <input type="number" id="rate" placeholder="Nhập lãi suất bạn muốn">
+    <input type="number" id="year" placeholder="Nhập số năm cần tính" >
+    <input type="button" onclick="cul()" value="tính lãi">
+    <hr>
+    <p id="result_1">Lãi suất của bạn là: </p>
+    <p id="result_2"></p>
+    
+    <script>
+       function cul(){
+            let origin = document.getElementById('origin').value;
+            let year = document.getElementById('year').value;
+            let rate = document.getElementById('rate').value;
+            let interest_rate = ((origin*rate)/100)*year;
+                let interest_rate1 = Math.round(interest_rate)
+        
+            document.getElementById('result_1').innerHTML = 'Lãi suất của bạn là: ' + interest_rate1 + " VNĐ"
+        }
+
+    </script>
+    
+</body>
+</html>
